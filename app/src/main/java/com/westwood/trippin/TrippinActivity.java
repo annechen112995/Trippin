@@ -25,7 +25,8 @@ public class TrippinActivity extends AppCompatActivity {
         setContentView(R.layout.activity_trippin);
 
 
-        String[] trips = {"Las Vegas", "San Francisco", "San Diego", "Mammoth"};
+        String[] trips = {"Las Vegas", "San Francisco", "San Diego", "Mammoth", "Big Bear", "Davis",
+                "Seatle", "Chicago", "New York", "Mexico", "Santa Barbara"};
         ListAdapter lvItemAdapter = new customTrippinAdapter(this, trips);
         ListView lvItem = (ListView) findViewById(R.id.lvTrips);
         lvItem.setAdapter(lvItemAdapter);
