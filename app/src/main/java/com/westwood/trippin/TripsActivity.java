@@ -26,6 +26,10 @@ public class TripsActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        String origin = getIntent().getStringExtra("origin");
+        String destination = getIntent().getStringExtra("destination");
+        int code = getIntent().getIntExtra("code", 0);
+
         vpPager = (ViewPager) findViewById(R.id.vpPager);
 
         vpPager.setAdapter(new SmartFragmentStatePagerAdapter(getSupportFragmentManager()) {

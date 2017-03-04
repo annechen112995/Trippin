@@ -1,5 +1,6 @@
 package com.westwood.trippin;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -24,7 +25,7 @@ public class TrippinActivity extends AppCompatActivity {
         setContentView(R.layout.activity_trippin);
 
 
-        String[] trips = {"Las Vagas", "San Francisco", "San Diego", "Mammoth"};
+        String[] trips = {"Las Vegas", "San Francisco", "San Diego", "Mammoth"};
         ListAdapter lvItemAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, trips);
         ListView lvItem = (ListView) findViewById(R.id.lvTrips);
         lvItem.setAdapter(lvItemAdapter);
@@ -34,7 +35,12 @@ public class TrippinActivity extends AppCompatActivity {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         String trip = String.valueOf(parent.getItemIdAtPosition(position));
-                        Toast.makeText(TrippinActivity.this, trip, Toast.LENGTH_LONG).show();
+                        //Toast.makeText(TrippinActivity.this, trip, Toast.LENGTH_LONG).show();
+                        Intent i = new Intent(TrippinActivity.this, TripsActivity.class);
+                        i.putExtra("origin", "Las Vegas");
+                        i.putExtra("destination", "San Francisco");
+                        i.putExtra("code", 400);
+                        startActivity(i);
                     }
                 }
         );
