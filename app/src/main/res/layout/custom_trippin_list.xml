@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/tripView"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="75dp"
         android:layout_margin="5dp"
         android:adjustViewBounds="true"
         android:background="@mipmap/test"
@@ -17,6 +17,9 @@
         android:scaleType="centerCrop"
         android:text="Las Vegas"
         android:textColor="#ffff"
-        android:textSize="70dp" />
+        android:textSize="45dp"
+        android:maxLines="2"
+        android:minTextSize = "10dp"/>
+
 
 </LinearLayout>
