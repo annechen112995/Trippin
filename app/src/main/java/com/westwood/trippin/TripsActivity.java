@@ -61,8 +61,11 @@ public class TripsActivity extends AppCompatActivity {
     }
 
     //Returns the order of the fragments in the pager adapter
-    public class TripsPagerAdapter extends SmartFragmentStatePagerAdapter {
-        private String tabTitles[] = {"Map", "Gallery", "Packing", "Expense"};
+    public class TripsPagerAdapter extends SmartFragmentStatePagerAdapter implements PagerSlidingTabStrip.IconTabProvider {
+        //private String tabTitles[] = {"Map", "Gallery", "Packing", "Expense"};
+        final int PAGE_COUNT = 4;
+        private int tabIcons[] = {R.drawable.ic_tab_map, R.drawable.ic_tab_gallery,
+                R.drawable.ic_tab_packing, R.drawable.ic_tab_expense};
 
         //Adapter gets the manager, insert or remove fragments from the activity
         public TripsPagerAdapter(FragmentManager fm) {
@@ -85,16 +88,15 @@ public class TripsActivity extends AppCompatActivity {
             }
         }
 
-        //Returns the tab title
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return tabTitles[position];
-        }
-
         //Number of fragments to swipe between
         @Override
         public int getCount() {
-            return tabTitles.length;
+            return PAGE_COUNT;
+        }
+
+        @Override
+        public int getPageIconResId(int position) {
+            return tabIcons[position];
         }
     }
 
