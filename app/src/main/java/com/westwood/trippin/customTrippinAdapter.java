@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -16,7 +17,6 @@ import org.w3c.dom.Text;
 class customTrippinAdapter extends ArrayAdapter<String>{
     customTrippinAdapter(Context context, String[] trips) {
         super(context, R.layout.custom_trippin_list, trips);
-
     }
 
     @Override
@@ -26,6 +26,7 @@ class customTrippinAdapter extends ArrayAdapter<String>{
 
         String trip = getItem(position);
         TextView textItem = (TextView) customView.findViewById(R.id.tripView);
+        ImageView imageItem = (ImageView) customView.findViewById(R.id.tripImage);
 
         textItem.setText(trip);
         return customView;
