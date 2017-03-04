@@ -1,5 +1,6 @@
 package com.westwood.trippin;
 
+import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -17,10 +18,6 @@ public class TripsActivity extends AppCompatActivity {
     ViewPager vpPager;
     PagerSlidingTabStrip tabsStrip;
 
-    //public TripsActivity(SmartFragmentStatePagerAdapter adapterViewPager) {
-    //    this.adapterViewPager = adapterViewPager;
-    //}
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,13 +25,9 @@ public class TripsActivity extends AppCompatActivity {
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
 
-        String origin = getIntent().getStringExtra("origin");
-        String destination = getIntent().getStringExtra("destination");
-        int code = getIntent().getIntExtra("code", 0);
-
         vpPager = (ViewPager) findViewById(R.id.vpPager);
 
-        //adapterViewPager = new TripsPagerAdapter(getSupportFragmentManager());
+        adapterViewPager = new TripsPagerAdapter(getSupportFragmentManager());
         vpPager.setAdapter(adapterViewPager);
 
         // Give the PagerSlidingTabStrip the ViewPager
@@ -67,8 +60,42 @@ public class TripsActivity extends AppCompatActivity {
         });
     }
 
-    //public TripsPagerAdapter() {
+    //Returns the order of the fragments in the pager adapter
+    public class TripsPagerAdapter extends SmartFragmentStatePagerAdapter {
+        private String tabTitles[] = {"Map", "Gallery", "Packing", "Expense"};
 
-//    }
+        //Adapter gets the manager, insert or remove fragments from the activity
+        public TripsPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        //The order and creation of fragments within the pager
+        @Override
+        public Fragment getItem(int position) {
+            if (position == 0) {
+                return new MapFragment();
+            } else if (position == 1) {
+                return new GalleryFragment();
+            } else if (position == 2) {
+                return new PackingFragment();
+            } else if (position == 3) {
+                return new ExpenseFragment();
+            } else {
+                return null;
+            }
+        }
+
+        //Returns the tab title
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return tabTitles[position];
+        }
+
+        //Number of fragments to swipe between
+        @Override
+        public int getCount() {
+            return tabTitles.length;
+        }
+    }
 
 }

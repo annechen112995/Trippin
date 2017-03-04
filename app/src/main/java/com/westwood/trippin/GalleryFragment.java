@@ -25,7 +25,7 @@ public class GalleryFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mPage = getArguments().getInt(ARG_PAGE);
+        //mPage = getArguments().getInt(ARG_PAGE);
     }
 
     // Inflate the fragment layout we defined above for this fragment
@@ -34,7 +34,7 @@ public class GalleryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_gallery, container, false);
         TextView tvTitle = (TextView) view.findViewById(R.id.tvTitle);
-        tvTitle.setText("Fragment #" + mPage);
+        //tvTitle.setText("Fragment #" + mPage);
         return view;
     }
 }
