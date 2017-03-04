@@ -1,13 +1,18 @@
 package com.westwood.trippin;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 
 public class TripsActivity extends AppCompatActivity {
+
+    SmartFragmentStatePagerAdapter adapterViewPager;
+    ViewPager vpPager;
+
+    public TripsActivity(SmartFragmentStatePagerAdapter adapterViewPager) {
+        this.adapterViewPager = adapterViewPager;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,14 +21,12 @@ public class TripsActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        vpPager = (ViewPager) findViewById(R.id.vpPager);
+
+        //Set the viewpager adapter for the pager
+        //adapterViewPager = new TripsPagerAdapter();
+        //vpPager.setAdapter(adapterViewPager);
+
     }
 
 }
