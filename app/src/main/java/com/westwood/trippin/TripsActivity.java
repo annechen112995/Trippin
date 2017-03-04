@@ -17,9 +17,9 @@ public class TripsActivity extends AppCompatActivity {
     ViewPager vpPager;
     PagerSlidingTabStrip tabsStrip;
 
-    public TripsActivity(SmartFragmentStatePagerAdapter adapterViewPager) {
-        this.adapterViewPager = adapterViewPager;
-    }
+    //public TripsActivity(SmartFragmentStatePagerAdapter adapterViewPager) {
+    //    this.adapterViewPager = adapterViewPager;
+    //}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,17 +34,8 @@ public class TripsActivity extends AppCompatActivity {
 
         vpPager = (ViewPager) findViewById(R.id.vpPager);
 
-        vpPager.setAdapter(new SmartFragmentStatePagerAdapter(getSupportFragmentManager()) {
-            @Override
-            public Fragment getItem(int position) {
-                return null;
-            }
-
-            @Override
-            public int getCount() {
-                return 0;
-            }
-        });
+        //adapterViewPager = new TripsPagerAdapter(getSupportFragmentManager());
+        vpPager.setAdapter(adapterViewPager);
 
         // Give the PagerSlidingTabStrip the ViewPager
         tabsStrip = (PagerSlidingTabStrip) findViewById(R.id.tabs);
@@ -75,5 +66,9 @@ public class TripsActivity extends AppCompatActivity {
             }
         });
     }
+
+    //public TripsPagerAdapter() {
+
+//    }
 
 }
