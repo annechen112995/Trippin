@@ -22,7 +22,7 @@
             android:name=".TrippinActivity"
             android:label="Trippin">
         <intent-filter>
-            <action android:name="com.coderefer.androidsplashscreenexample.MAINACTIVITY"/>
+            <action android:name="android.intent.action.VIEW"/>
             <category android:name="android.intent.category.DEFAULT"/>
         </intent-filter>
         </activity>

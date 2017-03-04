@@ -18,7 +18,7 @@ public class SplashActivity extends Activity {
                 }catch(InterruptedException e) {
                     e.printStackTrace();
                 }finally {
-                    Intent i = new Intent(Splash.this, Trippin.class);
+                    Intent i = new Intent(SplashActivity.this, TrippinActivity.class);
                     startActivity(i);
                 }
             }
