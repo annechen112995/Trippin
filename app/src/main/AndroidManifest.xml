@@ -20,9 +20,10 @@
 
         <activity
             android:name=".TrippinActivity"
-            android:label="Trippin">
+            android:label="Trippin"
+            android:theme="@style/AppTheme.NoActionBar">
         <intent-filter>
-            <action android:name="android.intent.action.VIEW"/>
+            <action android:name="android.it.action.VIEW"/>
             <category android:name="android.intent.category.DEFAULT"/>
         </intent-filter>
         </activity>
