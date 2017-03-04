@@ -37,9 +37,6 @@ public class TrippinActivity extends AppCompatActivity {
                         String trip = String.valueOf(parent.getItemIdAtPosition(position));
                         //Toast.makeText(TrippinActivity.this, trip, Toast.LENGTH_LONG).show();
                         Intent i = new Intent(TrippinActivity.this, TripsActivity.class);
-                        i.putExtra("origin", "Las Vegas");
-                        i.putExtra("destination", "San Francisco");
-                        i.putExtra("code", 400);
                         startActivity(i);
                     }
                 }
