@@ -18,8 +18,7 @@
         android:text="Las Vegas"
         android:textColor="#ffff"
         android:textSize="45dp"
-        android:maxLines="2"
-        android:minTextSize = "10dp"/>
+        android:maxLines="2" />
 
 
 </LinearLayout>
