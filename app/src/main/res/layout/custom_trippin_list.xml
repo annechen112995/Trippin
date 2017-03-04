@@ -4,21 +4,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="@dimen/default_gap"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:weightSum="1">
 
-    <TextView
-        android:id="@+id/tripView"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_margin="5dp"
-        android:adjustViewBounds="true"
-        android:background="@mipmap/test"
-        android:gravity="center"
-        android:scaleType="centerCrop"
-        android:text="Las Vegas"
-        android:textColor="#ffff"
-        android:textSize="45dp"
-        android:maxLines="2" />
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/tripImage"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            app:srcCompat="@mipmap/test" />
+
+        <TextView
+            android:id="@+id/tripView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="Las Vegas"
+            android:textColor="#FFF"
+            android:textSize="45dp" />
+    </FrameLayout>
 
 
 </LinearLayout>
