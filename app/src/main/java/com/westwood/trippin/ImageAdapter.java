@@ -7,6 +7,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.GridView;
 
+
 public class ImageAdapter extends BaseAdapter {
     private Context context;
 
@@ -27,10 +28,16 @@ public class ImageAdapter extends BaseAdapter {
         context = c;
     }
 
+    // NEW
+//    void add (String path){
+//        itemList.add(path);
+//    }
+
     @Override
     public int getCount() {
         return images.length;
     }
+
 
     @Override
     public Object getItem(int position){
