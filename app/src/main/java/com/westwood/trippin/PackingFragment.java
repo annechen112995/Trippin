@@ -61,6 +61,7 @@ public class PackingFragment extends Fragment {
                 items.add(itemText);
                 //etNewItem.setText("");
                 itemsAdapter.notifyDataSetChanged();
+                etNewItem.setText("");
             }
         });
 
