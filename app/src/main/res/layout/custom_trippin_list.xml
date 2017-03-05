@@ -29,12 +29,12 @@
             android:shadowColor="@color/Black"
             android:shadowDx="0"
             android:shadowDy="0"
-            android:shadowRadius="16"
+            android:shadowRadius="30"
             android:gravity="center"
             android:maxLines="2"
             android:text="Las Vegas"
             android:textColor="#FFF"
-            android:textSize="35dp"
+            android:textSize="32dp"
             android:textStyle="bold" />
     </FrameLayout>
 
