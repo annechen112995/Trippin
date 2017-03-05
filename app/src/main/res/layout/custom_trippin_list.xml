@@ -9,13 +9,13 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp">
+        android:layout_height="96dp">
 
         <ImageView
             android:id="@+id/tripImage"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_margin="5dp"
+            android:layout_height="match_parent"
+            android:layout_margin="7dp"
             android:gravity="center"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/img4" />
@@ -24,6 +24,7 @@
             android:id="@+id/tripView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="7dp"
             android:fontFamily="casual"
             android:gravity="center"
             android:maxLines="2"
