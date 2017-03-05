@@ -26,11 +26,15 @@
             android:layout_height="match_parent"
             android:layout_margin="7dp"
             android:fontFamily="casual"
+            android:shadowColor="@color/Black"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="16"
             android:gravity="center"
             android:maxLines="2"
             android:text="Las Vegas"
             android:textColor="#FFF"
-            android:textSize="45dp"
+            android:textSize="35dp"
             android:textStyle="bold" />
     </FrameLayout>
 
