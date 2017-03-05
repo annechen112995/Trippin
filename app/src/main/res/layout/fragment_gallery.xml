@@ -23,7 +23,7 @@
             android:gravity="center"
             android:ems="10"
             android:inputType="textPersonName"
-            android:fontFamily="sans-serif-thin"
+            android:fontFamily="sans-serif-tin"
             android:text="G A L L E R Y"
             android:textColor="#000"
             android:textSize="35dp"/>
@@ -38,8 +38,15 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="78dp"
         android:columnWidth= "100dp"
-        android:horizontalSpacing="1dp"
+        android:horizontalSpacing="20dp"
         android:numColumns="auto_fit"
         android:verticalSpacing="5dp" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/expanded_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:contentDescription="description_zoom_touch_close"
+        />
+    </FrameLayout>
