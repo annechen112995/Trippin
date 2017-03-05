@@ -11,7 +11,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import com.squareup.picasso.Picasso;
+
+import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
 
 
 class customTrippinAdapter extends ArrayAdapter<String>{
@@ -27,6 +29,9 @@ class customTrippinAdapter extends ArrayAdapter<String>{
         String trip = getItem(position);
         TextView textItem = (TextView) customView.findViewById(R.id.tripView);
         ImageView imageItem = (ImageView) customView.findViewById(R.id.tripImage);
+
+        Picasso.with(getContext()).load(R.drawable.img4).fit()
+                .transform(new RoundedCornersTransformation(10, 10)).into(imageItem);
 
         textItem.setText(trip);
         return customView;
