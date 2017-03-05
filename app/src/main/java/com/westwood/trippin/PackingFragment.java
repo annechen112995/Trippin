@@ -46,12 +46,9 @@ public class PackingFragment extends Fragment {
         etNewItem = (EditText) view.findViewById(R.id.etNewItem);
         items = new ArrayList<>();
         itemsAdapter = new PackingAdapter(getContext(), items);
-        items.add("Umbrella.....jk");
-        items.add("Hot Cheetos ftw");
-        items.add("Polaroid Cam");
-        items.add("Water Bottle");
-        items.add("Jacket");
-        items.add("Toothpaste");
+        items.add("Polaroid Camera");
+        items.add("Water Bottles");
+        items.add("Instant Noodles");
 
         setupListViewListener();
 

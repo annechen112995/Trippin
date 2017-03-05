@@ -96,43 +96,18 @@ public class ExpenseFragment extends Fragment {
         results = new ArrayList<>();
 
         ExpensesCost sr = new ExpensesCost();
-        sr.setName("Gas - LA");
+        sr.setName("Gas (Los Angeles)");
         sr.setCost("24.50");
         results.add(sr);
 
         sr = new ExpensesCost();
-        sr.setName("McDonalds - Santa Barbara");
+        sr.setName("Vons Groceries");
         sr.setCost("16.95");
         results.add(sr);
 
         sr = new ExpensesCost();
-        sr.setName("777 Motel");
+        sr.setName("MOMA Tickets");
         sr.setCost("90.00");
-        results.add(sr);
-
-        sr = new ExpensesCost();
-        sr.setName("Vons");
-        sr.setCost("19.89");
-        results.add(sr);
-
-        sr = new ExpensesCost();
-        sr.setName("Corner Bakery");
-        sr.setCost("12.52");
-        results.add(sr);
-
-        sr = new ExpensesCost();
-        sr.setName("Gas - Bakersfield");
-        sr.setCost("20.00");
-        results.add(sr);
-
-        sr = new ExpensesCost();
-        sr.setName("7-11");
-        sr.setCost("10.02");
-        results.add(sr);
-
-        sr = new ExpensesCost();
-        sr.setName("Cruise");
-        sr.setCost("70.92");
         results.add(sr);
 
         return results;
