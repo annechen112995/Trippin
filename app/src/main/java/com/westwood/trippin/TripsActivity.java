@@ -59,7 +59,7 @@ public class TripsActivity extends AppCompatActivity {
     public class TripsPagerAdapter extends SmartFragmentStatePagerAdapter implements PagerSlidingTabStrip.IconTabProvider {
         //private String tabTitles[] = {"Map", "Gallery", "Packing", "Expense"};
         final int PAGE_COUNT = 4;
-        private int tabIcons[] = {R.drawable.ic_tab_map, R.drawable.ic_tab_gallery,
+        private int tabIcons[] = {R.drawable.ic_tab_gallery, R.drawable.ic_tab_map,
                 R.drawable.ic_tab_packing, R.drawable.ic_tab_expense};
 
         //Adapter gets the manager, insert or remove fragments from the activity
@@ -71,9 +71,9 @@ public class TripsActivity extends AppCompatActivity {
         @Override
         public Fragment getItem(int position) {
             if (position == 0) {
-                return new MapFragment();
-            } else if (position == 1) {
                 return new GalleryFragment();
+            } else if (position == 1) {
+                return new MapFragment();
             } else if (position == 2) {
                 return new PackingFragment();
             } else if (position == 3) {
