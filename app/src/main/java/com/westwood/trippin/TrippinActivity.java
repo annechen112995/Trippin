@@ -25,7 +25,7 @@ public class TrippinActivity extends AppCompatActivity {
     ListView lvItem;
     ListAdapter lvItemAdapter;
     String[] trips = {"Las Vegas", "San Francisco", "San Diego", "Mammoth", "Big Bear", "Davis",
-            "Seattle", "Chicago", "New York", "Mexico", "Santa Barbara"};
+            "Seattle", "Chicago", "New York", "Mexico City", "Santa Barbara"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
