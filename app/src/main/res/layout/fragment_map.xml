@@ -32,8 +32,6 @@
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:paddingBottom="20dp"
-            android:scale="centerCrop"
-            android:scaleType="centerCrop"
             app:srcCompat="@drawable/vegastosanf" />
     </LinearLayout>
 
