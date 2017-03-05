@@ -55,4 +55,9 @@ import android.widget.BaseAdapter;
             TextView txtName;
             TextView txtCost;
         }
+
+
+        public void addNew(ExpensesCost newItem) {
+            expensesList.add(newItem);
+        }
     }
