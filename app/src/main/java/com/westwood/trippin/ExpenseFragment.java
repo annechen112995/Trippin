@@ -106,7 +106,7 @@ public class ExpenseFragment extends Fragment {
         results.add(sr);
 
         sr = new ExpensesCost();
-        sr.setName("MOMA Tickets");
+        sr.setName("Museum Tickets");
         sr.setCost("90.00");
         results.add(sr);
 

@@ -34,10 +34,6 @@ public class ImageAdapter extends BaseAdapter implements Serializable {
         context = c;
     }
 
-    // NEW
-//    void add (String path){
-//        itemList.add(path);
-//    }
 
     @Override
     public int getCount() {
