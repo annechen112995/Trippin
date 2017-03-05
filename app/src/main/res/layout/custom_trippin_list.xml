@@ -16,20 +16,23 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_margin="5dp"
+            android:background="@color/cardview_shadow_start_color"
             android:gravity="center"
             android:scaleType="centerCrop"
-            app:srcCompat="@mipmap/test" />
+            app:srcCompat="@drawable/img4" />
 
         <TextView
             android:id="@+id/tripView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
+            android:fontFamily="casual"
             android:gravity="center"
             android:maxLines="2"
             android:text="Las Vegas"
             android:textColor="#FFF"
-            android:textSize="45dp" />
+            android:textSize="45dp"
+            android:textStyle="bold" />
     </FrameLayout>
 
 

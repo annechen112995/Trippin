@@ -3,51 +3,35 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     android:layout_width="fill_parent"
-
     android:layout_height="wrap_content"
-
     android:layout_margin="3dp"
-
     android:orientation="horizontal"
-
     android:padding="8dp"
-
     android:background="#636466">
 
 
     <TextView
 
         android:id="@+id/expTitle"
-
         android:layout_width="150dp"
-
         android:layout_height="wrap_content"
-
         android:layout_weight="0.69"
-
         android:text="Item"
-
         android:textColor="#f8f8f8"
-
         android:textSize="15sp"
-
+        android:fontFamily="casual"
         />
 
 
     <TextView
-
         android:id="@+id/expCost"
-
-        android:layout_width="128dp"
-
+        android:layout_width="77dp"
         android:layout_height="wrap_content"
-
-        android:textSize="15sp"
-
-        android:textColor="#f8f8f8"
-
         android:text="Cost"
-
+        android:textColor="#f8f8f8"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:fontFamily="casual"
         />
 
 </LinearLayout>
