@@ -23,9 +23,10 @@ import static android.app.Activity.RESULT_OK;
 
 public class ExpenseFragment extends Fragment {
     public static final String ARG_PAGE = "ARG_PAGE";
-    private int mPage;
 
     private CustomExpensesAdapter adapter;
+    ListView lvExp;
+    private ArrayList<ExpensesCost> results;
 
     public static ExpenseFragment newInstance(int page) {
         Bundle args = new Bundle();
@@ -42,8 +43,7 @@ public class ExpenseFragment extends Fragment {
 
 
         View view = inflater.inflate(R.layout.fragment_expense, container, false);
-        TextView tvTitle = (TextView) view.findViewById(R.id.tvTitle);
-        //tvTitle.setText("Fragment #" + mPage);
+        lvExp = (ListView) view.findViewById(R.id.lvExp);
 
         ArrayList<ExpensesCost> expenseslist = GetExpensesCost();
 
@@ -51,12 +51,30 @@ public class ExpenseFragment extends Fragment {
         final ListView lv = (ListView) view.findViewById(R.id.lvExp);
         lv.setAdapter(adapter);
 
+        lvExp.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                //results.remove();
+                adapter.notifyDataSetChanged();
+                return true;
+            }
+        });
+
+        lvExp.setLongClickable(true);
+
+        lvExp.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                results.remove(position);
+                adapter.notifyDataSetChanged();
+                return true;
+            }
+        });
+
         Button b = (Button) view.findViewById(R.id.addButton);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivityForResult(new Intent(getActivity(),Pop.class),999);
-
             }
         });
 
@@ -74,9 +92,8 @@ public class ExpenseFragment extends Fragment {
         }
     }
 
-
     private ArrayList<ExpensesCost> GetExpensesCost(){
-        ArrayList<ExpensesCost> results = new ArrayList<ExpensesCost>();
+        results = new ArrayList<>();
 
         ExpensesCost sr = new ExpensesCost();
         sr.setName("Gas - LA");
