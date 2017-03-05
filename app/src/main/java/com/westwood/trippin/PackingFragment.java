@@ -1,25 +1,22 @@
 package com.westwood.trippin;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class PackingFragment extends Fragment {
     public static final String ARG_PAGE = "ARG_PAGE";
     private ArrayList<String> items;
-    private ArrayAdapter<String> itemsAdapter;
+    private PackingAdapter itemsAdapter;
+    //private ArrayAdapter<String> itemsAdapter;
     private ListView lvItems;
     private Button btnAddItems;
     private EditText etNewItem;
@@ -48,7 +45,7 @@ public class PackingFragment extends Fragment {
         btnAddItems = (Button) view.findViewById(R.id.btnAddItem);
         etNewItem = (EditText) view.findViewById(R.id.etNewItem);
         items = new ArrayList<>();
-        itemsAdapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, items);
+        itemsAdapter = new PackingAdapter(getContext(), items);
         items.add("Umbrella.....jk");
         items.add("Hot Cheetos ftw");
         items.add("Polaroid Cam");
@@ -61,7 +58,7 @@ public class PackingFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String itemText = etNewItem.getText().toString();
-                itemsAdapter.add(itemText);
+                items.add(itemText);
                 etNewItem.setText("");
             }
         });
