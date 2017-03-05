@@ -9,10 +9,12 @@ import android.widget.GridView;
 
 import com.squareup.picasso.Picasso;
 
+import java.io.Serializable;
+
 import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
 
 
-public class ImageAdapter extends BaseAdapter {
+public class ImageAdapter extends BaseAdapter implements Serializable {
     private Context context;
 
     public Integer [] images = {
@@ -42,6 +44,9 @@ public class ImageAdapter extends BaseAdapter {
         return images.length;
     }
 
+    public Integer [] getImages() {
+        return images;
+    }
 
     @Override
     public Object getItem(int position){
@@ -63,6 +68,7 @@ public class ImageAdapter extends BaseAdapter {
         //imageView.setImageResource(images[position]);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         imageView.setLayoutParams(new GridView.LayoutParams(240,240));
+
         return imageView;
     }
 
