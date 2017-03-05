@@ -2,22 +2,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.westwood.trippin.PackingFragment">
 
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/lvItems"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/btnAddItem" />
+        android:layout_below="@+id/editText" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/etNewItem"
-        android:layout_alignTop="@+id/btnAddItem"
         android:hint="Enter a new item"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -33,5 +31,22 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:ems="10"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:paddingBottom="15dp"
+        android:paddingTop="10dp"
+        android:text="P A C K I N G    L I S T"
+        android:textColor="#000"
+        android:textSize="35dp" />
 
 </RelativeLayout>
