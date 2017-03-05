@@ -51,6 +51,7 @@ public class PackingFragment extends Fragment {
         items.add("Polaroid Cam");
         items.add("Water Bottle");
         items.add("Jacket");
+        items.add("Toothpaste");
 
         setupListViewListener();
 
