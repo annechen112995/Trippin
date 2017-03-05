@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,6 +30,7 @@ public class Pop extends Activity {
         int height = dm.heightPixels;
 
         getWindow().setLayout((int) (0.9 * width), (int) (0.9 * height));
+        getWindow().setGravity(Gravity.CENTER);
 
         cost = (EditText) findViewById(R.id.expCost);
         name = (EditText) findViewById(R.id.expName);

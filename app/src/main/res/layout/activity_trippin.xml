@@ -22,11 +22,13 @@
 
         <ListView
             android:id="@+id/lvTrips"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/trippinText"
             android:layout_centerHorizontal="true"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:background="#C0FFFFFF" />
 
         <TextView
@@ -39,9 +41,9 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="12dp"
-            android:fontFamily="sans-serif"
+            android:fontFamily="sans-serif-thin"
             android:gravity="center"
-            android:text="T R I P P I N"
+            android:text="T R I P P I N '"
             android:textColor="#FFF"
             android:textSize="40dp" />
     </RelativeLayout>
