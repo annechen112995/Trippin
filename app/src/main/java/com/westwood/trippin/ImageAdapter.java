@@ -7,6 +7,10 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.GridView;
 
+import com.squareup.picasso.Picasso;
+
+import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
+
 
 public class ImageAdapter extends BaseAdapter {
     private Context context;
@@ -52,7 +56,11 @@ public class ImageAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
         ImageView imageView = new ImageView(context);
-        imageView.setImageResource(images[position]);
+
+        Picasso.with(context).load(images[position]).fit()
+                .transform(new RoundedCornersTransformation(10, 10)).into(imageView);
+
+        //imageView.setImageResource(images[position]);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         imageView.setLayoutParams(new GridView.LayoutParams(240,240));
         return imageView;
