@@ -59,7 +59,8 @@ public class PackingFragment extends Fragment {
             public void onClick(View view) {
                 String itemText = etNewItem.getText().toString();
                 items.add(itemText);
-                etNewItem.setText("");
+                //etNewItem.setText("");
+                itemsAdapter.notifyDataSetChanged();
             }
         });
 
