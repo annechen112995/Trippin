@@ -13,20 +13,6 @@
         android:paddingRight="0dp"
         android:paddingTop="5dp">
 
-        <TextView
-            android:id="@+id/editText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/gridView"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:gravity="center"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:fontFamily="sans-serif-tin"
-            android:text="G A L L E R Y"
-            android:textColor="#000"
-            android:textSize="35dp"/>
     </RelativeLayout>
 
     <GridView
@@ -42,11 +28,24 @@
         android:numColumns="auto_fit"
         android:verticalSpacing="5dp" />
 
+    <TextView
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:ems="10"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="G A L L E R Y"
+        android:textColor="#000"
+        android:textSize="35dp" />
+
     <ImageView
         android:id="@+id/expanded_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="invisible"
         android:contentDescription="description_zoom_touch_close"
-        />
-    </FrameLayout>
+        android:visibility="invisible" />
+</FrameLayout>

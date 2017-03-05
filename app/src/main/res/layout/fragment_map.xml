@@ -29,10 +29,9 @@
         <ImageView
             android:id="@+id/ivMap"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="451dp"
             android:layout_margin="3dp"
             android:paddingBottom="20dp"
-            android:scale="centerCrop"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/vegastosanf" />
     </LinearLayout>
