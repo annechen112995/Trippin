@@ -57,6 +57,7 @@ import android.widget.BaseAdapter;
         }
 
 
+
         public void addNew(ExpensesCost newItem) {
             expensesList.add(newItem);
         }
